@@ -5,6 +5,7 @@ using System.Collections;
 public class increaseDrinkCount : MonoBehaviour {
 
 	public Text drinkText;
+	public string drinkName;
 
 	private int drinkCount;
 	
@@ -24,6 +25,6 @@ public class increaseDrinkCount : MonoBehaviour {
 
 	void setCountText ()
 	{
-		drinkText.text = "You've drank " + drinkCount.ToString () + " beers!";
+		drinkText.text = "You've drank " + drinkCount.ToString () + " " + drinkName;
 	}
 }
