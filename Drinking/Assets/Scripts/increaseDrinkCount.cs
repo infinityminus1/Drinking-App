@@ -6,8 +6,11 @@ public class increaseDrinkCount : MonoBehaviour {
 
 	public Text drinkText;
 	public string drinkName;
+	public float ABV; //ounces of alcohol per drink
 
-	private int drinkCount;
+	public int drinkCount;
+
+	private float ouncesOfAlcohol;
 	
 
 	void Awake ()
@@ -25,6 +28,11 @@ public class increaseDrinkCount : MonoBehaviour {
 
 	void setCountText ()
 	{
-		drinkText.text = "You've drank " + drinkCount.ToString () + " " + drinkName;
+		drinkText.text = drinkName + ": "+ drinkCount.ToString () ;
+	}
+
+	public float getDrinkCount()
+	{
+		return drinkCount;
 	}
 }
